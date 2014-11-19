@@ -24,8 +24,8 @@ Examples
     >>> myhosts.hostname.igor4.ipadress 
     ValueError: No such host entry in this hosts object.
 
-Hack
-====
+Contribute
+==========
 
 - python setup.py test to run tests
 
