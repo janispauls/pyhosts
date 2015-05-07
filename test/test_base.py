@@ -1,6 +1,4 @@
 import unittest
-from nose.tools import nottest
-from mock import MagicMock
 
 from pyhosts import Hosts, Host
 
@@ -12,9 +10,6 @@ class TestBaseCases(unittest.TestCase):
     def setUp(self):
         self.maxDiff = None
         self.myhosts = Hosts()
-
-    def test_one(self):
-        self.assertEquals("/etc/hosts", self.myhosts.file_path)
 
     def test_content_empty(self):
         self.myhosts._readlines = lambda x: []
