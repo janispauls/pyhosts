@@ -43,10 +43,13 @@ class Hosts(object):
         return self._hosts.__iter__()
 
     def _file_path(self):
-        if platform.system() == "Linux":
+        system_name = platform.system()
+        if system_name == "Linux":
             return "/etc/hosts"
-        elif platform.system() == "Windows":
+        elif system_name == "Windows":
             return r"c:/windows/system32/drivers/etc/hosts"
+        elif system_name == "Darwin":
+            return "/private/etc/hosts"
         else:
             raise PlatformNotSupportedException
 
