@@ -1,6 +1,4 @@
-import platform
 from netaddr import IPAddress
-from netaddr.core import AddrFormatError
 
 
 class Host(object):
