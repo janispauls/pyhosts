@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pletisan/pyhosts.svg?branch=master)](https://travis-ci.org/pletisan/pyhosts)
+[![Build Status](https://travis-ci.org/janispauls/pyhosts.svg?branch=master)](https://travis-ci.org/janispauls/pyhosts)
 
 pyhosts
 =======
