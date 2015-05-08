@@ -12,11 +12,11 @@ class DuplicateEntryError(Exception):
 
 
 class Hosts(object):
-    def __init__(self):
+    def __init__(self, file_path=None):
         self._lines = None  # Temp storage for read file lines
         self._hosts = None
 
-        self.file_path = self._file_path()
+        self.file_path = file_path or self._file_path()
 
     def __str__(self):
         return "Hosts file: %s" % self.file_path

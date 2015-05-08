@@ -57,3 +57,14 @@ class TestBaseCases(unittest.TestCase):
 
         for first, second in zip(_readlines, entries):
             self.assertEquals(first, str(second))
+
+    def test_file_path_override(self):
+        localhost = Host(
+            '127.0.0.1', 'localhost.localdomain', 'localhost', None)
+
+        with open('/tmp/testhosts', 'w') as hostsfile:
+            hostsfile.write(str(localhost))
+
+        hosts = [h for h in Hosts('/tmp/testhosts')]
+
+        assert hosts == [localhost]
